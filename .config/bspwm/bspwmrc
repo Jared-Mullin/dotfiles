@@ -1,0 +1,20 @@
+#! /bin/sh
+
+sxhkd &
+
+bspc monitor eDP-1 -d I II III IV V VI VII IIX IX X
+
+xrandr --output HDMI-1 --same-as eDP-1
+
+bspc config border_width         1
+bspc config window_gap          6
+
+bspc config split_ratio          0.5
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a Emacs state=tiled desktop=^2
+
+picom -C -G -b -i 0.8
+
+wal -i ~/Pictures/Wallpapers
