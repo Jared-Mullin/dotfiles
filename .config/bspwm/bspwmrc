@@ -2,7 +2,7 @@
 
 sxhkd &
 
-bspc monitor eDP-1 -d I II III IV V VI VII IIX IX X
+bspc monitor -d I II III IV V VI VII VIII IX X
 
 xrandr --output HDMI-1 --same-as eDP-1
 
@@ -15,6 +15,10 @@ bspc config gapless_monocle      true
 
 bspc rule -a Emacs state=tiled desktop=^2
 
-picom -C -G -b -i 0.8
+picom -C -G -b -i 0.9
+
+sh ~/.config/polybar/launch.sh
 
 wal -i ~/Pictures/Wallpapers
+
+[ ! -s ~/.config/mpd/pid ] && mpd
