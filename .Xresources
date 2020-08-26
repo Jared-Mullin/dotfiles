@@ -1,3 +1,4 @@
-URxvt*font:		xft:MesloLGS NF-10
-URxvt*letterSpace:	-1
+URxvt*font: xft:MesloLGS NF-10
+URxvt*letterSpace: -1
 URxvt.scrollBar: false
+Xcursor.theme: capitaine-cursors

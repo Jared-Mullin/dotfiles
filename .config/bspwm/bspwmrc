@@ -17,6 +17,8 @@ bspc rule -a Emacs state=tiled desktop=^2
 
 picom -C -G -b -i 0.9
 
+xsetroot -cursor_name left_ptr &
+
 sh ~/.config/polybar/launch.sh
 
 wal -i ~/Pictures/Wallpapers
