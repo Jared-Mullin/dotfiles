@@ -18,8 +18,14 @@
 
 (use-package company
 	     :straight t
+             :hook (prog-mode . company-mode)
 	     :config
-	     (add-hook 'after-init-hook 'global-company-mode))
+             (setq company-tooltip-align-annotations t)
+             (setq company-minimum-prefix-length 1))
+
+(use-package company-box
+  :straight t
+  :hook (company-mode . company-box-mode))
 
 (use-package which-key
   :straight t

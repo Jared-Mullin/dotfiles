@@ -1,14 +1,12 @@
 (use-package toml-mode :straight t)
 
+(setq lsp-rust-server 'rust-analyzer)
+
 (use-package rust-mode
   :straight t
   :hook ((rust-mode . lsp-deferred)
          (before-save . lsp-format-buffer)
-         (before-save . lsp-organize-imports))
-        :config
-          ; (setq lsp-prefer-capf t)
-          ; (setq lsp-completion-provider :capf)
-          (setq lsp-completion-enable t))
+         (before-save . lsp-organize-imports)))
 
 ;; Add keybindings for interacting with Cargo
 (use-package cargo
@@ -18,7 +16,6 @@
 (use-package flycheck-rust
   :straight t
   :config (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
-
 
 (provide 'lang-rust)
 

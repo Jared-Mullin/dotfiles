@@ -1,6 +1,7 @@
 (use-package go-mode
+  :straight t
   :hook ((go-mode . lsp-deferred)
-         (before-save . lsp-format-buffer)
+         (before-save . gofmt-before-save)
          (before-save . lsp-organize-imports)))
 
 (provide 'lang-go)
