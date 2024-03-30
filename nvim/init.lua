@@ -52,26 +52,26 @@ local lspconfig = require('lspconfig')
 
 -- setup gopls with customizations.
 lspconfig.gopls.setup{
-	settings = {
-		gopls = {
-			analyses = {
-				unusedparams = true,
-			},
-			staticcheck = true, 
-			gofumpt = true,
-		}
-	},
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true, 
+      gofumpt = true,
+    },
+  },
 }
 
 -- setup pylsp with customizations.
 lspconfig.pylsp.setup{
-	settings = {
-		pylsp = {
-			plugins = {
-				pylint = true,
-			}
-		}
-	}
+  settings = {
+    pylsp = {
+      plugins = {
+        pylint = true,
+      },
+    },
+  },
 }
 
 -- setup rust_analyser with customizations
@@ -109,7 +109,7 @@ cmp.setup({
 
 -- Format on save
 vim.api.nvim_create_autocmd("BufWritePre", {
-  pattern = {"*.py", "*.c", "*.go", "*.rs"},
+  pattern = {"*.py", "*.c", "*.go", "*.rs", "*.yaml"},
   callback = function()
     vim.lsp.buf.format()
   end,
