@@ -12,4 +12,3 @@ vim.opt.softtabstop = 2
 
 -- enable smart indentation
 vim.opt.smartindent = true
-

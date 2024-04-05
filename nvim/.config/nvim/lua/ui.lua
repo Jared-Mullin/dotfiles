@@ -1,3 +1,6 @@
+-- colorscheme
+vim.cmd.colorscheme("hybrid")
+
 -- line numbers
 vim.wo.number = true
 
