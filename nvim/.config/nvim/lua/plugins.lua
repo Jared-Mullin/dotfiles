@@ -32,5 +32,7 @@ require('lazy').setup({
 	{'nvim-telescope/telescope.nvim'},
 	{'nvim-lua/plenary.nvim'},
 	{'BurntSushi/ripgrep'},
-	{'telescope-fzf-native.nvim'}
+	{'telescope-fzf-native.nvim'},
+	-- treesitter
+	{'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
 })
