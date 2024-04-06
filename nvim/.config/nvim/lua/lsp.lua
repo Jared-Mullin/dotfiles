@@ -1,11 +1,13 @@
--- Configuring LSPs.
+-- configuring LSPs.
 local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-
+-- mason autoinstalls language servers.
+require('mason').setup()
+require('mason-lspconfig').setup()
 local lspconfig = require('lspconfig')
 
 -- setup gopls with customizations.

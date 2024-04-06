@@ -35,4 +35,9 @@ require('lazy').setup({
 	{'telescope-fzf-native.nvim'},
 	-- treesitter
 	{'nvim-treesitter/nvim-treesitter', build = ':TSUpdate'},
+	-- undotree
+	{'mbbill/undotree'},
+	-- mason
+	{'williamboman/mason.nvim'},
+	{'williamboman/mason-lspconfig.nvim'},
 })
