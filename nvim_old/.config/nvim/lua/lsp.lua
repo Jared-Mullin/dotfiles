@@ -1,23 +1,46 @@
+-- configuring LSPs.
 local lsp_zero = require('lsp-zero')
 
 lsp_zero.on_attach(function(client, bufnr)
   lsp_zero.default_keymaps({buffer = bufnr})
 end)
 
-require('mason').setup({})
-require('mason-lspconfig').setup({
-  ensure_installed = {},
-  handlers = {
-    lsp_zero.default_setup,
-    gopls = function()
-	require('lspconfig').gopls.setup({})
-    end,
-    yamlls = function()
-	require('lspconfig').yamlls.setup({})
-    end
-  },
- })
+-- mason autoinstalls language servers.
+require('mason').setup()
+require('mason-lspconfig').setup()
+local lspconfig = require('lspconfig')
 
+-- setup gopls with customizations.
+lspconfig.gopls.setup{
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true, 
+      gofumpt = true,
+    },
+  },
+}
+
+-- setup pylsp with customizations.
+lspconfig.pylsp.setup{
+  settings = {
+    pylsp = {
+      plugins = {
+        pylint = true,
+      },
+    },
+  },
+}
+
+-- setup rust_analyser with customizations
+lspconfig.rust_analyzer.setup({})
+
+-- Setup yamlls with defaults 
+lspconfig.yamlls.setup{}
+
+-- Auto Complete.
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
@@ -44,4 +67,10 @@ cmp.setup({
   },
 })
 
-
+-- Format on save
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = {"*.py", "*.c", "*.go", "*.rs", "*.yaml"},
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
