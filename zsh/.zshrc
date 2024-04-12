@@ -21,6 +21,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 
 export PATH="$PATH:$(go env GOPATH)/bin"
+export PATH="$PATH:/home/phi/.local/bin"
 export FZF_DEFAULT_OPTS="--height=40% --layout=reverse --info=inline --preview 'cat {}' --border --margin=1 --padding=1"
 
 export EDITOR='nvim'
@@ -31,3 +32,5 @@ alias tmux="tmux -f ~/dotfiles/tmux/.tmux.conf"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+eval "$(zoxide init zsh)"
