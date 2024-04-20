@@ -7,6 +7,8 @@ return {
   config = function()
     require('telescope').setup()
     local builtin = require('telescope.builtin')
-    vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+    vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Find File' })
+    vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Find Buffers' })
+    vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Live Grep' })
   end
 }
