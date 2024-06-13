@@ -12,4 +12,3 @@ vim.opt.wrap = false
 vim.opt.termguicolors = true
 
 vim.opt.updatetime = 50
-
