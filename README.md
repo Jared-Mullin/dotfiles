@@ -20,6 +20,7 @@ A big thanks to the following projects for the themes and inspiration:
 
 -   **[adi1090x/polybar-themes](https://github.com/adi1090x/polybar-themes)**
 -   **[adi1090x/rofi](https://github.com/adi1090x/rofi)**
+-   **[nyoom-engineering/oxocarbon](https://github.com/nyoom-engineering/oxocarbon)**
 
 ## Usage
 
