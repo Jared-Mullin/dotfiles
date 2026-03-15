@@ -1,0 +1,16 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Oxocarbon Dark Colors
+ **/
+
+* {
+    background:     #161616FF;
+    background-alt: #262626FF;
+    foreground:     #FFFFFFFF;
+    selected:       #33B1FFFF;
+    active:         #FF7EB6FF;
+    urgent:         #EE5396FF;
+}

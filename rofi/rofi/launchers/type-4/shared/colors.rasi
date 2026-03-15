@@ -1,0 +1,16 @@
+/**
+ *
+ * Author : Aditya Shakya (adi1090x)
+ * Github : @adi1090x
+ * 
+ * Colors
+ *
+ * Available Colors Schemes
+ *
+ * onedark, oxocarbon
+ *
+ **/
+
+/* Import color-scheme from `colors` directory */
+
+@import "~/.config/rofi/colors/oxocarbon.rasi"
