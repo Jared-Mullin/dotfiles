@@ -20,14 +20,14 @@ zstyle ':completion:*' menu select
 
 # FZF Integration
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
-source /usr/share/fzf/completion.zsh
-source /usr/share/fzf/key-bindings.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 autoload -Uz compinit
 compinit
 
 # Plugins
-source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(starship init zsh)"
+
