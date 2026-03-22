@@ -1,0 +1,2 @@
+-f bestvideo[height>=?1440][vcodec^=vp9]+bestaudio/bestvideo[height<=?1440][vcodec^=av0]+bestaudio/bestvideo+bestaudio/best
+ 
