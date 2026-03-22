@@ -1,6 +1,10 @@
 # Colors (Oxocarbon)
 # Source https://vimcolorschemes.com/nyoom-engineering/oxocarbon.nvim
 
+[terminal.shell]
+program = "/usr/bin/tmux"
+args = ["new-session", "-A", "-s", "default"]
+
 # Default colors
 [colors.primary]
 background = '#1b1b1b'
